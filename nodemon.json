@@ -5,5 +5,5 @@
   "env": {
     "NODE_ENV": "development"
   },
-  "ext": "ts,json"
+  "ext": "js,json"
 }
