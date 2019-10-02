@@ -1,5 +1,6 @@
 require('dotenv').config();
 
-const appConfig = require('./apiConfig');
+const apiConfig = require('./apiConfig');
+const databaseConfig = require('./databaseConfig');
 
-module.exports = { appConfig };
+module.exports = { apiConfig, databaseConfig };
