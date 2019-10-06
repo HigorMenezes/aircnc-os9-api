@@ -8,6 +8,8 @@ const {
   SpotController,
   DashboardController,
   BookingController,
+  ApprovalController,
+  RejectionController,
 } = require('./controllers');
 
 const routes = express.Router();
@@ -21,5 +23,8 @@ routes.post('/spots', upload.single('thumbnail'), SpotController.store);
 routes.get('/dashboard', DashboardController.show);
 
 routes.post('/spots/:spot_id/bookings', BookingController.store);
+
+routes.put('/bookings/:booking_id/approvals', ApprovalController.update);
+routes.put('/bookings/:booking_id/rejections', RejectionController.update);
 
 module.exports = routes;
